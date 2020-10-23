@@ -18,7 +18,7 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1603478796,,"wq"
+|2,0,1603480849,,"wq"
 :wq!
 |2,0,1603478665,,"wq!"
 :q
@@ -140,20 +140,20 @@ $
 |3,0,36,0,1,0,1603303317,"#"
 
 # File marks:
-'0  15  11  ~/Ansible_Training/test.yml
-|4,48,15,11,1603479613,"~/Ansible_Training/test.yml"
+'0  1  4  ~/abc
+|4,48,1,4,1603480849,"~/abc"
 '1  15  11  ~/Ansible_Training/test.yml
-|4,49,15,11,1603478796,"~/Ansible_Training/test.yml"
-'2  16  4  ~/Ansible_Training/test.yml
-|4,50,16,4,1603478731,"~/Ansible_Training/test.yml"
+|4,49,15,11,1603479613,"~/Ansible_Training/test.yml"
+'2  15  11  ~/Ansible_Training/test.yml
+|4,50,15,11,1603478796,"~/Ansible_Training/test.yml"
 '3  16  4  ~/Ansible_Training/test.yml
 |4,51,16,4,1603478731,"~/Ansible_Training/test.yml"
 '4  16  4  ~/Ansible_Training/test.yml
 |4,52,16,4,1603478731,"~/Ansible_Training/test.yml"
 '5  16  4  ~/Ansible_Training/test.yml
 |4,53,16,4,1603478731,"~/Ansible_Training/test.yml"
-'6  16  0  ~/Ansible_Training/test.yml
-|4,54,16,0,1603478665,"~/Ansible_Training/test.yml"
+'6  16  4  ~/Ansible_Training/test.yml
+|4,54,16,4,1603478731,"~/Ansible_Training/test.yml"
 '7  16  0  ~/Ansible_Training/test.yml
 |4,55,16,0,1603478665,"~/Ansible_Training/test.yml"
 '8  16  0  ~/Ansible_Training/test.yml
@@ -162,8 +162,14 @@ $
 |4,57,16,0,1603478665,"~/Ansible_Training/test.yml"
 
 # Jumplist (newest first):
+-'  1  4  ~/abc
+|4,39,1,4,1603480849,"~/abc"
 -'  15  11  ~/Ansible_Training/test.yml
 |4,39,15,11,1603479613,"~/Ansible_Training/test.yml"
+-'  15  11  ~/Ansible_Training/test.yml
+|4,39,15,11,1603479613,"~/Ansible_Training/test.yml"
+-'  15  11  ~/Ansible_Training/test.yml
+|4,39,15,11,1603478796,"~/Ansible_Training/test.yml"
 -'  15  11  ~/Ansible_Training/test.yml
 |4,39,15,11,1603478796,"~/Ansible_Training/test.yml"
 -'  16  4  ~/Ansible_Training/test.yml
@@ -171,13 +177,25 @@ $
 -'  16  4  ~/Ansible_Training/test.yml
 |4,39,16,4,1603478762,"~/Ansible_Training/test.yml"
 -'  16  4  ~/Ansible_Training/test.yml
+|4,39,16,4,1603478762,"~/Ansible_Training/test.yml"
+-'  16  4  ~/Ansible_Training/test.yml
+|4,39,16,4,1603478762,"~/Ansible_Training/test.yml"
+-'  16  4  ~/Ansible_Training/test.yml
 |4,39,16,4,1603478731,"~/Ansible_Training/test.yml"
+-'  16  4  ~/Ansible_Training/test.yml
+|4,39,16,4,1603478731,"~/Ansible_Training/test.yml"
+-'  16  0  ~/Ansible_Training/test.yml
+|4,39,16,0,1603478665,"~/Ansible_Training/test.yml"
 -'  16  0  ~/Ansible_Training/test.yml
 |4,39,16,0,1603478665,"~/Ansible_Training/test.yml"
 -'  15  0  ~/Ansible_Training/test.yml
 |4,39,15,0,1603478633,"~/Ansible_Training/test.yml"
 -'  15  0  ~/Ansible_Training/test.yml
 |4,39,15,0,1603478633,"~/Ansible_Training/test.yml"
+-'  15  0  ~/Ansible_Training/test.yml
+|4,39,15,0,1603478633,"~/Ansible_Training/test.yml"
+-'  15  0  ~/Ansible_Training/test.yml
+|4,39,15,0,1603478633,"~/Ansible_Training/test.yml"
 -'  13  73  ~/Ansible_Training/test.yml
 |4,39,13,73,1603478583,"~/Ansible_Training/test.yml"
 -'  13  73  ~/Ansible_Training/test.yml
@@ -186,6 +204,22 @@ $
 |4,39,13,73,1603478583,"~/Ansible_Training/test.yml"
 -'  13  73  ~/Ansible_Training/test.yml
 |4,39,13,73,1603478583,"~/Ansible_Training/test.yml"
+-'  13  73  ~/Ansible_Training/test.yml
+|4,39,13,73,1603478583,"~/Ansible_Training/test.yml"
+-'  13  73  ~/Ansible_Training/test.yml
+|4,39,13,73,1603478583,"~/Ansible_Training/test.yml"
+-'  13  73  ~/Ansible_Training/test.yml
+|4,39,13,73,1603478583,"~/Ansible_Training/test.yml"
+-'  13  73  ~/Ansible_Training/test.yml
+|4,39,13,73,1603478583,"~/Ansible_Training/test.yml"
+-'  14  23  ~/Ansible_Training/test.yml
+|4,39,14,23,1603478532,"~/Ansible_Training/test.yml"
+-'  14  23  ~/Ansible_Training/test.yml
+|4,39,14,23,1603478532,"~/Ansible_Training/test.yml"
+-'  14  23  ~/Ansible_Training/test.yml
+|4,39,14,23,1603478532,"~/Ansible_Training/test.yml"
+-'  14  23  ~/Ansible_Training/test.yml
+|4,39,14,23,1603478532,"~/Ansible_Training/test.yml"
 -'  14  23  ~/Ansible_Training/test.yml
 |4,39,14,23,1603478532,"~/Ansible_Training/test.yml"
 -'  14  23  ~/Ansible_Training/test.yml
@@ -204,6 +238,16 @@ $
 |4,39,1,0,1603478297,"~/Ansible_Training/test.yml"
 -'  1  0  ~/Ansible_Training/test.yml
 |4,39,1,0,1603478297,"~/Ansible_Training/test.yml"
+-'  1  0  ~/Ansible_Training/test.yml
+|4,39,1,0,1603478297,"~/Ansible_Training/test.yml"
+-'  1  0  ~/Ansible_Training/test.yml
+|4,39,1,0,1603478297,"~/Ansible_Training/test.yml"
+-'  1  0  ~/Ansible_Training/test.yml
+|4,39,1,0,1603478297,"~/Ansible_Training/test.yml"
+-'  1  0  ~/Ansible_Training/test.yml
+|4,39,1,0,1603478297,"~/Ansible_Training/test.yml"
+-'  1  0  ~/Ansible_Training/test.yml
+|4,39,1,0,1603478297,"~/Ansible_Training/test.yml"
 -'  219  50  ~/dynamic_inventory/ec2.ini
 |4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
 -'  219  50  ~/dynamic_inventory/ec2.ini
@@ -268,102 +312,65 @@ $
 |4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
 -'  219  50  ~/dynamic_inventory/ec2.ini
 |4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1  0  ~/dynamic_inventory/ec2.ini
-|4,39,1,0,1603443198,"~/dynamic_inventory/ec2.ini"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
--'  1692  17  ~/dynamic_inventory/ec2.py
-|4,39,1692,17,1603443190,"~/dynamic_inventory/ec2.py"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
+-'  219  50  ~/dynamic_inventory/ec2.ini
+|4,39,219,50,1603443222,"~/dynamic_inventory/ec2.ini"
 
 # History of marks within files (newest to oldest):
+
+> ~/abc
+	*	1603480848	0
+	"	1	4
+	^	1	5
+	.	1	4
+	+	1	4
 
 > ~/Ansible_Training/test.yml
 	*	1603478811	0
@@ -1941,16 +1948,3 @@ $
 > /etc/apache2/sites-enabled/virtualhost.conf
 	*	1602079974	0
 	"	1	0
-
-> /var/www/html/index.html
-	*	1602079084	0
-	"	1	11
-	^	1	12
-	.	1	11
-	+	1	6
-	+	1	7
-	+	1	6
-	+	1	7
-	+	1	6
-	+	77	7
-	+	1	11

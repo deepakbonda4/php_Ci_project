@@ -1,0 +1,28 @@
+---  
+  - name: Checking os_family by gethering fact
+    setup: filter=ansible_os_family
+    register: result
+
+  - name: Display result
+    debug:
+      msg: "Display Result {{ result }}"
+
+  - name: installing nginx for Centos
+    yum: name=nginx state=latest
+    when: ansible_os_family == "Redhat"
+
+  - name: installing nginx for Debian
+    apt: name=nginx state=latest
+    when: ansible_os_family == "Debian"
+
+  - name: Creating root directory for static website
+    file: path=/opt/html state=directory
+
+  - name: Configuration for website root change
+    template: src=default_conf.j2 dest=/etc/nginx/sites-available/default
+    notify: action_start_nginx
+
+  - name: Adding index file to root directory
+    template: src=index.html.j2 dest=/opt/html/index.html
+    notify: action_start_nginx
+

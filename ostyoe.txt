@@ -1,0 +1,21 @@
+server4.example.com | SUCCESS => {
+    "ansible_facts": {
+        "ansible_distribution": "Amazon", 
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false
+}
+server2.example.com | SUCCESS => {
+    "ansible_facts": {
+        "ansible_distribution": "Ubuntu", 
+        "discovered_interpreter_python": "/usr/bin/python3"
+    }, 
+    "changed": false
+}
+server3.example.com | SUCCESS => {
+    "ansible_facts": {
+        "ansible_distribution": "Ubuntu", 
+        "discovered_interpreter_python": "/usr/bin/python3"
+    }, 
+    "changed": false
+}

@@ -1,0 +1,13 @@
+[node]
+server1.example.com ansible_ssh_host=127.0.0.1 ansible_user=ubuntu
+
+[remote]
+ansibleNew.example.com ansible_ssh_host=172.31.41.0 ansible_user=ubuntu
+ansible2.example.com ansible_ssh_host=172.31.33.70 ansible_user=ubuntu
+
+[app]
+server4.example.com ansible_ssh_host=172.31.33.115 ansible_user=ubuntu
+
+[hulk] 
+ansibleNew.example.com ansible_ssh_host=172.31.41.0 ansible_user=ubuntu
+

@@ -1,0 +1,9 @@
+TOMCAT7_USER=tomcat7
+
+TOMCAT7_GROUP=tomcat7
+
+JAVA_HOME=/usr/lib/jvm/default-java
+
+# Number of days to keep logfiles in /var/log/tomcat7. Default is 14 days.
+LOGFILE_DAYS=14
+

@@ -1,0 +1,18 @@
+--- 
+
+   namxe: install tomcat7 and configuring it
+   hosts: app
+   become: yes 
+   remote_user: ubuntu
+      
+   tasks:
+   - name: Install the tomcat7 package
+      apt:
+        name: tomcat7
+        state: present
+        update_cache: yes
+    
+   - name: Ensure the installed service is enabled and running
+       service:
+          name: tomacat
+          state: started

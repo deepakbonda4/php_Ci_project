@@ -1,0 +1,43 @@
+---
+
+- name: Install nginx
+  hosts: remote
+  become: true
+
+  tasks:
+  - name: updating apt update
+    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+  - name: Install nginx
+    apt:
+      name: nginx
+      state: present
+
+  - name: Insert Index Page
+    copy:
+      src: index.html
+      dest: /usr/share/nginx/html/index.html
+
+  - name: Start NGiNX
+    service:
+      name: nginx
+      state: started
+    
+      #  - yum: name=nginx state=present
+      # when: ansible_os_family == "RedHat"
+  
+
+      # - apt: name=nginx state=present
+      #when: ansible_os_family == "Debian"
+
+
+      # handlers:
+      # - name: Restart Nginx
+      #  service:
+      #     name: nginx
+      #     state: restarted   
+    
+    
+...
+
+

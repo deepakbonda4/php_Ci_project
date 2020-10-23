@@ -1,0 +1,22 @@
+---
+- name: checking listening ports
+  hosts: hulk
+  tasks:
+   - name: List all ports
+     shell: netstat -a | grep -i  LISTEN
+     register: results
+     ignore_errors: true
+   - name: copy content
+     copy:
+      content: "{{ results.stdout_lines|join('\n') }}"
+      dest: listenports.txt
+   - name: fetch with hostname
+     fetch:
+      src: listenports.txt
+      dest: /tmp
+   - name: checking if open-ssh is installed or not on debian
+     shell: dpkg --list | grep -i "openssh"
+     when: "ansible_os_family" == "Debian"
+   - name: checking of open-ssh is installed or not on Redhat
+     shell: rpm -qa | grep -i openssh
+     when: ansible_os_family= "RedHat"

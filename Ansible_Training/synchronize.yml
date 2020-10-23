@@ -1,0 +1,9 @@
+---
+- hosts: remote
+  
+  tasks:
+   - name: "synchronizing directory"
+     synchronize:
+      src: /var/tmp/dirforsync
+      dest: /var/tmp
+

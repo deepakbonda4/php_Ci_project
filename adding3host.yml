@@ -1,0 +1,9 @@
+---
+- hosts: node
+  become: yes
+  tasks:
+
+    - name: adding host in inventory file
+      lineinfile: dest=/home/ubuntu/hosts line="[ubuntu] server6.example.com ansible_ssh_host=172.31.39.244 ansible_user=ubuntu" state=present
+      
+

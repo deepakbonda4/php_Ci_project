@@ -1,0 +1,16 @@
+---
+
+- name: testttttttttttttttttttttttttttttttiiiiiiiiing
+  hosts: app
+  
+
+  tasks: 
+  - name: Name of the task to be executed 
+    block: 
+       - debug: msg = 'Just a debug message , relevant for logging' 
+       - shell: pwd 
+    rescue: 
+       - debug: msg = 'There was an exception.. ' 
+       - shell: date 
+    always: 
+       - debug: msg = "this will execute in all scenarios. Always will get logged"

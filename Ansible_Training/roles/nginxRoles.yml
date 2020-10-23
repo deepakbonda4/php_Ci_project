@@ -1,0 +1,7 @@
+---
+- name: installing nginx to server
+  hosts: remote
+  become: true
+
+  roles:
+   - nginx-roles

@@ -1,0 +1,7 @@
+apt-get update
+install nginx
+start the service
+Check status
+make mageia.html file and copy to nginx
+restart nginx
+check in web browser- serverip:80

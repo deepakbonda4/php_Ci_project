@@ -1,0 +1,106 @@
+---
+
+ - name: "Installing apache on remote servers" 
+   hosts: hulk
+   become: true 
+   vars: 
+     domainName: sampledomain.com
+
+   tasks:
+   - name: "Installing apache2"
+     apt:
+      name: apache2
+      state: present
+      update_cache: yes
+   
+   - name: "starting apache2"    
+     service:
+       name: apache2
+       state: started
+
+   - name: "allowing uncomplicated firewall ufw for apache"
+     command: ufw allow Apache
+
+   - name: "checking the status of apache"
+     command: systemctl status apache2
+     register: result
+
+   - name: "showing report"
+     debug:
+       var: result
+
+   - name: "setting up domain name"
+     file:
+       path: /var/www/{{ domainName }}
+       state: directory
+       recurse: yes
+       mode: '0755'
+
+   - name: "creating html directory"
+     file:
+       path: /var/www/{{ domainName }}/html
+       state: directory 
+       recurse: yes
+       owner: ubuntu
+       group: ubuntu
+   
+   - name: "creating index page for our site"
+     copy:
+       dest: "/var/www/{{ domainName }}/html/index.html"
+       content: |
+        <html>
+        <head>
+        <title>Welcome to the page {{ domainName }}!</title>
+        </head>
+        <body>
+        <h1>You got Lucky! Your {{ domainName }} server block is up!</h1>
+        </body>
+        </html>
+     
+   - name: "creating virtual host file for our site"
+     copy:
+       dest: "/etc/apache2/sites-available/{{ domainName }}.conf"
+       content: |
+          <VirtualHost *:80>
+          ServerAdmin admin@{{ domainName }}
+          ServerName {{ domainName }}
+          ServerAlias www.{{ domainName }}
+          DocumentRoot /var/www/{{ domainName }}/html
+          ErrorLog ${APACHE_LOG_DIR}/error.log
+          CustomLog ${APACHE_LOG_DIR}/access.log combined
+          </VirtualHost>
+
+   - name: "enable domain config file"
+     command: a2ensite {{ domainName }}.conf
+
+   - name: "disable default config file"
+     command: a2dissite 000-default.conf
+     notify: 
+     - Restart apache
+
+   - name: "testing for errors"
+     command: apache2ctl configtest
+     register: result
+
+   - name: "showing report"
+     debug:
+       var: result
+
+   - name: "creating servername.conf file"
+     copy:
+       dest: "/etc/apache2/conf-available/servername.conf"
+       content: |
+          ServerName {{ domainName }}
+     when: result != "Syntax OK" 
+
+   - name: "enabling conf servername"
+     command: a2enconf servername
+
+
+   handlers: 
+   - name: Restart apache
+     service:
+       name: apache2
+       state: restarted
+
+

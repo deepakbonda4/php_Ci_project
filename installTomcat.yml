@@ -1,0 +1,17 @@
+--- 
+- name: "install tomcat7 and configuring it"
+  hosts: app
+  become: true
+
+  tasks: 
+ 
+  - apt: 
+      name: tomcat7
+      state: present
+      update_cache: true
+    name: "Install the tomcat7 package"
+   
+  - name: "Ensure the installed service is enabled and running"
+    service: 
+      name: tomacat
+      state: started

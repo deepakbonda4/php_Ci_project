@@ -1,0 +1,10 @@
+---
+
+- hosts: remote
+  tasks:
+    - cron:
+        user: ubuntu
+        minute: "*/1"
+        hour: "*"
+        job: 'touch /var/log/deepakadh.txt && "echo `hostname && date` >> /var/log/deepakadh.txt"'
+        state: present

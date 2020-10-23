@@ -1,0 +1,23 @@
+---
+
+- hosts: node
+- hosts: remote
+  become: yes
+
+  tasks:
+   - name: "creating new keys"
+     openssh_keypair:
+      path: /home/ubuntu/.ssh/deepu
+      type: rsa
+      size: 2048
+      state: present
+      force: yes
+     when: hosts == "node"
+
+   - name: "rotating ssh keys"
+     shell: "cat /home/ubuntu/.ssh/deepu.pub >> /home/ubuntu/.ssh/authorized_keys"
+     register: addtoauth
+     when: hosts == "remote" 
+
+
+

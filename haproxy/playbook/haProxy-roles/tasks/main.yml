@@ -1,0 +1,8 @@
+---
+
+- include_tasks: installation.yml
+
+- include_tasks: configuration.yml
+
+- include_tasks: startWithConfigFile.yml
+

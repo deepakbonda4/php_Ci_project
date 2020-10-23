@@ -1,0 +1,31 @@
+ frontend {{ FRONTEND_NAME }}
+ bind *:{{ FRONTEND_PORT }}
+ timeout client {{ TIMEOUT_CLIENT_SEC }}s
+ mode {{ MODE }}
+ default_backend {{ BACKEND_NAME }}
+
+ backend {{ BACKEND_NAME }}
+ timeout connect {{ BKND_TIMEOUT_CONNECT_SEC }}s
+ timeout server {{ BKND_TIMEOUT_SERVER_SEC }}s
+ mode {{ MODE }}
+
+{% for x in ServerDetails %}
+server {{ x.BACKEND_SERVER }} {{ x.BACKEND_SERVER_IP }}:80
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

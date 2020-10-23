@@ -1,0 +1,9 @@
+
+---
+- name: creating users
+  hosts: wakanda
+  become: true
+
+  roles:
+      - role
+

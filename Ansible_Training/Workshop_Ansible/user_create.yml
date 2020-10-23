@@ -1,0 +1,17 @@
+---
+- name: creating users
+  hosts: wakanda
+  become: true
+
+  tasks:
+
+   - name: group creation
+     group:
+       name: mageia
+       state: present
+
+   - name: user creation
+     user:
+       name: bunny
+       state: present
+       group: mageia

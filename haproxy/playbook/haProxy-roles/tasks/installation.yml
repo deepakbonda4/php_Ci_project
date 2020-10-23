@@ -1,0 +1,21 @@
+---
+
+- name: Install haProxy
+  apt:
+    update_cache: yes
+    name: haproxy
+    state: latest
+  when: ansible_os_family == "Debian"
+
+- name: Install haProxy
+  yum:
+    update_cache: yes
+    name: haproxy
+    state: latest
+  when: ansible_os_family == "RedHat"
+
+- name: Enable haProxy service
+  service:
+    name: haproxy
+    state: started
+

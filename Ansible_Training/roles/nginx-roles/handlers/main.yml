@@ -1,0 +1,5 @@
+---
+
+- name: action_start_nginx
+  service: name=nginx state=restarted
+

@@ -1,0 +1,54 @@
+---
+
+- name: creating swap file
+  hosts: app
+  become: true
+
+  tasks:
+  - name: Check if swap file exists
+    stat:
+      path: /swapfile
+    register: swap_file
+    changed_when: false
+
+  - name: swap status
+    command: swapon -s
+    ignore_errors: true
+
+  - name: create swap file
+    file: 
+      path: /swapfile
+      state: touch
+      owner: root
+      group: root
+      mode: '0600'
+
+  - name: define swap memory
+    command: dd if=/dev/zero of=/swapfile count=4096 bs=1MiB
+    register: swap_file_created
+    when: (not swap_file.stat.exists) or
+          (swap_file.stat.size != (swap_file_size_mb * 1024 * 1024))
+
+
+  - name: enable swap file
+    command: mkswap /swapfile
+
+  - name: add swap in fstab
+    mount:
+      name: swap
+      src: /swapfile
+      fstype: swap 
+      opts: sw
+      passno: "0"
+      dump: "0"
+      state: present
+  
+  - name: start swap
+    command: swapon -a
+
+  - name: set swapiness
+    sysctl:
+      name: vm.swappiness
+      value: "10"
+      state: present
+

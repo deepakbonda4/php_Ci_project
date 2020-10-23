@@ -1,0 +1,5 @@
+---
+
+- name: starting haproxy with the config file we created
+  command: haproxy -f ~/haproxy/{{ Config }}.cfg
+

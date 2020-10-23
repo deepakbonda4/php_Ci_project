@@ -1,0 +1,10 @@
+server {
+	listen {{ port_number }};
+	listen [::]:{{ port_number }};
+
+	root /opt/html;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}

@@ -1,0 +1,13 @@
+---
+
+- name: Creating Directory
+  file:
+    path: ~/haproxy
+    state: directory
+
+- name: creating config file
+  template:
+    src: config.j2
+    dest: "~/haproxy/{{ Config }}.cfg"
+  notify: restart haProxy
+

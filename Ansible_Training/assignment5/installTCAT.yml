@@ -1,0 +1,50 @@
+---
+
+- name: Installing Java and Tomcat
+  hosts: server.example.com
+  remote_user: ubuntu
+  become: true
+
+  tasks:
+
+  - name: install java
+    apt:
+      name: "{{ item }}"
+      state: present
+      update_cache: yes
+    with_items:
+        - openjdk-8-jdk
+
+  - name: install Tomcat
+    apt: 
+      name: "{{ item }}"
+      state: present
+      update_cache: yes
+    with_items:
+        - tomcat8
+        - tomcat8-admin
+
+  - name: Managing tomcat user role
+    copy:
+      src: tomcat-users.xml
+      dest: /var/lib/tomcat8/conf
+
+  - name: deploy application
+    copy:
+      src: ~/Ansible_Training/assignment5/helloworld.war
+      dest: /var/lib/tomcat8/webapps/
+    notify: restart Tomcat
+
+  handlers: 
+    - name: restart Tomcat
+      service:
+          name: tomcat8
+          state: restarted
+
+
+
+
+
+
+
+

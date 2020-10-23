@@ -1,0 +1,31 @@
+---
+
+- name: Install Tomcat7 
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - tomcat7
+
+- name: Symlink to /usr/local/tomcat
+  file: 
+    dest=/usr/local/tomcat 
+    state=link 
+    src=/var/lib/tomcat7
+
+- name: Set Tomcat Deployment Directory Permissions
+  file: 
+    dest=/usr/local/tomcat/webapps 
+    state=directory 
+    owner={{ tomcat_user }}  group={{ tomcat_user }}  
+    mode=0775
+
+- name: Configuring Tomcat Service 
+  template: 
+    src=tomcat7.j2 
+    dest=/etc/default/tomcat7 
+    owner=root 
+    group=root 
+    mode=0644
+  notify: restart_tomcat
+
+- name: Enable Tomcat Service
+  service: name=tomcat7 enabled=yes

@@ -1,0 +1,31 @@
+---
+
+- name: openports and other
+  hosts: app
+  remote_user: ubuntu
+
+  tasks:
+
+  - name: listing openPorts
+    shell: netstat -tunlp
+    register: openports
+
+  - name: displaying openports
+    debug:
+       var: openports
+
+  - name: checking hostname
+    shell: hostname
+    register: hostn
+
+  - name: creating file on local 
+    copy:
+       path: /home/ubuntu/ "{{ hostn }}"
+       content: |
+             "{{ openpoorts }}"
+       deligate_to: localhost
+
+  - name: disabling all port
+    ufw:
+
+

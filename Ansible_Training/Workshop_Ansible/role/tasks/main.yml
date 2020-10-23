@@ -1,0 +1,21 @@
+---
+
+   - name: group creation
+     group:
+       name: "{{ group_name}}"
+       state: present
+
+   - name: user creation
+     user:
+       name: "{{ user_name }}"
+       state: present
+       group: "{{ group_name }}"
+
+   - name: Allow  user to have passwordless sudo
+     lineinfile:
+      dest: /etc/sudoers
+      state: present
+      line: '{{ user_name }} ALL=(ALL) NOPASSWD: ALL'
+
+
+

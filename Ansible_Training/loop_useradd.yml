@@ -1,0 +1,19 @@
+---
+- name: adding multiple users
+  hosts: remote
+  become: yes
+
+  tasks:  
+  - name: add groups
+    group:
+     name: “{{ item.groups }}”
+     state: present
+  - name: add multiple users
+    user:
+     name: “{{ item.name }}”
+     state: present
+     group: “{{ item.groups }}”
+
+    with_items:
+     - { name: ‘user1’, groups: ‘NASA’ }
+     - { name: ‘user2’, groups: ‘ISRO’ }

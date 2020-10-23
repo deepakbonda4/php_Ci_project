@@ -1,0 +1,14 @@
+---
+- hosts: remote
+  become: yes
+  vars:
+    hostnamee:
+    - ansibleremote01
+    - ansibleremote02
+
+  tasks:
+  - name: "update hostnames"
+    hostname:
+      name: "{{ item }}"
+    with_items: "{{ hostnamee }}"
+...

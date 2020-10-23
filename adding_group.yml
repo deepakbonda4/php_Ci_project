@@ -1,0 +1,11 @@
+--- 
+ 
+all:
+  
+      debian: 
+        hosts: "172.31.39.221"
+     
+      centos: 
+        hosts: "172.31.80.54"
+  hosts: 
+    mail.example.com: 

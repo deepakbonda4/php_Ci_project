@@ -1,0 +1,46 @@
+---
+- name: Rotate SSH Keys
+  hosts: app
+  vars:
+    - ssh_key_bits: 2048
+    - new_pub_key: ~/.ssh/id_rsa_new.pub
+    - new_priv_key: ~/.ssh/id_rsa_new
+    - is_exclusive: yes
+    - ssh_host_user: ubuntu
+
+  tasks:
+
+  - name: create new ssh key-pair
+    command: ssh-keygen -t rsa -b {{ ssh_key_bits }} -N "" -q -f "{{ new_pub_key }}"
+    delegate_to: localhost
+
+  - name: storing value of public ssh key
+    set_fact: 
+       ssh_connection_key: "{{ lookup('file', new_pub_key + '.pub') }}"
+
+  - name: add new key to authorized_keys
+     become: yes
+     become_user: root
+     authorized_key: 
+          exclusive: "{{ is_exclusive }}"
+     user: "{{ ssh_host_user }}"
+     state: present
+     key: "{{ ssh_connection_key }}"
+
+
+
+      #  - name: add new key to authorized_keys
+      #    authorized_key: key=""
+      #                     user=ubuntu state=present
+
+      #   - name: make use of new private key when connecting
+      #     set_fact: ansible_privat_ssh_key=
+
+      #   - name: make our new key exclusive
+      #     authorized_key: key=""
+      #                     user=ubuntu state=present exclusive=yes
+
+      #   - name: move new key into default location
+      #     command: mv ~/.ssh/id_rsa
+     #     when: inventory_hostname == play_hosts[0]
+     #     delegate_to: localhost

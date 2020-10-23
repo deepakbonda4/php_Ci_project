@@ -1,0 +1,9 @@
+---
+
+- name: haproxy
+  hosts: app
+  become: true
+
+  roles:
+   - haProxy-roles
+

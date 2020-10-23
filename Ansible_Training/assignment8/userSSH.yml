@@ -1,0 +1,68 @@
+---
+
+- name: logical volume creation and user access
+  hosts: app
+  remote_user: ubuntu
+  become: true
+  tasks:
+
+  - name: creating group
+    group:
+       name: opstree
+
+  - name: creating directory
+    file: 
+       name: ninja
+       state: directory
+       group: opstree
+       mode: '0775'
+
+  - name: creating users
+    user: 
+       name: "{{ item.a }}"
+       password: "{{ item.b }}"
+       home: /home/{{ item.a }}
+       shell: /bin/sh
+       group: opstree
+
+    with_items:
+       - { a: deepak, b: deepak@123}
+       - { a: heena, b: heena@123}
+       - { a: bunny, b: bunny@123}
+       - { a: joey, b: joey@123}
+       - { a: ross, b: ross@123}
+
+
+  - name: "Deploy SSH Key"
+    authorized_key:
+        user: "{{ item.a }}"
+        key: "{{ lookup('file', '/home/{{ item.a }}/.ssh/id_rsa.pub') }}"
+        state: present
+
+    with_items:
+       - { a: deepak, b: deepak@123}
+       - { a: heena, b: heena@123}
+       - { a: bunny, b: bunny@123}
+       - { a: joey, b: joey@123}
+       - { a: ross, b: ross@123}
+
+
+
+  - name: Disable Password Authentication
+    lineinfile:
+         dest=/etc/ssh/sshd_config
+         regexp='^PasswordAuthentication'
+         line="PasswordAuthentication no"
+         state=present
+         backup=yes
+    notify:
+         restart ssh
+  
+  handlers:
+  - name: restart ssh
+    service:
+        name: sshd
+        state: restarted
+
+
+

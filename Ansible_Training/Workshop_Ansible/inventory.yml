@@ -1,0 +1,21 @@
+---
+- name: updating
+  become: true
+
+- name: Update the inventory file 
+  blockinfile:
+    path: /home/ubuntu/Ansible_Training/Workshop_Ansible/hosts
+    block: |
+      [company]
+      server2.example.com ansible_ssh_host=172.31.39.221 ansible_user=bunny
+      server2.example.com ansible_ssh_host=172.31.39.221 ansible_user=india
+      server2.example.com ansible_ssh_host=172.31.39.221 ansible_user=deepak
+
+      [Marketing]
+      server2.example.com ansible_ssh_host=172.31.39.221 ansible_user=bunny
+      server2.example.com ansible_ssh_host=172.31.39.221 ansible_user=india
+
+      [Personal]
+      server2.example.com ansible_ssh_host=172.31.39.221 ansible_user=deepak
+
+

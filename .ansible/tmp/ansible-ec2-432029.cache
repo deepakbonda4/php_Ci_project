@@ -1,0 +1,238 @@
+{
+  "_meta": {
+    "hostvars": {
+      "34.239.142.102": {
+        "ansible_host": "34.239.142.102", 
+        "ec2__in_monitoring_element": false, 
+        "ec2_account_id": "431666365896", 
+        "ec2_ami_launch_index": "0", 
+        "ec2_architecture": "x86_64", 
+        "ec2_block_devices": {
+          "sda1": "vol-0c7d03d449bd08dd8", 
+          "sdf": "vol-00d24a2e273f3c4f0"
+        }, 
+        "ec2_client_token": "", 
+        "ec2_dns_name": "ec2-34-239-142-102.compute-1.amazonaws.com", 
+        "ec2_ebs_optimized": false, 
+        "ec2_eventsSet": "", 
+        "ec2_group_name": "", 
+        "ec2_hypervisor": "xen", 
+        "ec2_id": "i-00ea82a3096d2e732", 
+        "ec2_image_id": "ami-06b263d6ceff0b3dd", 
+        "ec2_instance_type": "t2.micro", 
+        "ec2_ip_address": "34.239.142.102", 
+        "ec2_item": "", 
+        "ec2_kernel": "", 
+        "ec2_key_name": "mywinkp", 
+        "ec2_launch_time": "2020-10-21T11:12:23.000Z", 
+        "ec2_monitored": false, 
+        "ec2_monitoring": "", 
+        "ec2_monitoring_state": "disabled", 
+        "ec2_persistent": false, 
+        "ec2_placement": "us-east-1c", 
+        "ec2_platform": "", 
+        "ec2_previous_state": "", 
+        "ec2_previous_state_code": 0, 
+        "ec2_private_dns_name": "ip-172-31-43-140.ec2.internal", 
+        "ec2_private_ip_address": "172.31.43.140", 
+        "ec2_public_dns_name": "ec2-34-239-142-102.compute-1.amazonaws.com", 
+        "ec2_ramdisk": "", 
+        "ec2_reason": "", 
+        "ec2_region": "us-east-1", 
+        "ec2_requester_id": "", 
+        "ec2_root_device_name": "/dev/sda1", 
+        "ec2_root_device_type": "ebs", 
+        "ec2_security_group_ids": "sg-0ef74aec7d57e5c8e", 
+        "ec2_security_group_names": "launch-wizard-1", 
+        "ec2_sourceDestCheck": "true", 
+        "ec2_spot_instance_request_id": "", 
+        "ec2_state": "running", 
+        "ec2_state_code": 16, 
+        "ec2_state_reason": "", 
+        "ec2_subnet_id": "subnet-85a281d9", 
+        "ec2_tag_Name": "Main server", 
+        "ec2_virtualization_type": "hvm", 
+        "ec2_vpc_id": "vpc-5567152f"
+      }, 
+      "52.203.109.57": {
+        "ansible_host": "52.203.109.57", 
+        "ec2__in_monitoring_element": false, 
+        "ec2_account_id": "431666365896", 
+        "ec2_ami_launch_index": "0", 
+        "ec2_architecture": "x86_64", 
+        "ec2_block_devices": {
+          "sda1": "vol-09ce36bf4a8f4f44e"
+        }, 
+        "ec2_client_token": "", 
+        "ec2_dns_name": "ec2-52-203-109-57.compute-1.amazonaws.com", 
+        "ec2_ebs_optimized": false, 
+        "ec2_eventsSet": "", 
+        "ec2_group_name": "", 
+        "ec2_hypervisor": "xen", 
+        "ec2_id": "i-08691b704b3acbb8c", 
+        "ec2_image_id": "ami-06b263d6ceff0b3dd", 
+        "ec2_instance_profile": "", 
+        "ec2_instance_type": "t2.micro", 
+        "ec2_ip_address": "52.203.109.57", 
+        "ec2_item": "", 
+        "ec2_kernel": "", 
+        "ec2_key_name": "ansible2", 
+        "ec2_launch_time": "2020-10-20T19:06:55.000Z", 
+        "ec2_monitored": false, 
+        "ec2_monitoring": "", 
+        "ec2_monitoring_state": "disabled", 
+        "ec2_persistent": false, 
+        "ec2_placement": "us-east-1c", 
+        "ec2_platform": "", 
+        "ec2_previous_state": "", 
+        "ec2_previous_state_code": 0, 
+        "ec2_private_dns_name": "ip-172-31-40-209.ec2.internal", 
+        "ec2_private_ip_address": "172.31.40.209", 
+        "ec2_public_dns_name": "ec2-52-203-109-57.compute-1.amazonaws.com", 
+        "ec2_ramdisk": "", 
+        "ec2_reason": "", 
+        "ec2_region": "us-east-1", 
+        "ec2_requester_id": "", 
+        "ec2_root_device_name": "/dev/sda1", 
+        "ec2_root_device_type": "ebs", 
+        "ec2_security_group_ids": "sg-0ef74aec7d57e5c8e", 
+        "ec2_security_group_names": "launch-wizard-1", 
+        "ec2_sourceDestCheck": "true", 
+        "ec2_spot_instance_request_id": "", 
+        "ec2_state": "running", 
+        "ec2_state_code": 16, 
+        "ec2_state_reason": "", 
+        "ec2_subnet_id": "subnet-85a281d9", 
+        "ec2_tag_Name": "ansible  2", 
+        "ec2_virtualization_type": "hvm", 
+        "ec2_vpc_id": "vpc-5567152f"
+      }, 
+      "52.7.65.63": {
+        "ansible_host": "52.7.65.63", 
+        "ec2__in_monitoring_element": false, 
+        "ec2_account_id": "431666365896", 
+        "ec2_ami_launch_index": "0", 
+        "ec2_architecture": "x86_64", 
+        "ec2_block_devices": {
+          "sda1": "vol-0421d3e3759cc098b"
+        }, 
+        "ec2_client_token": "", 
+        "ec2_dns_name": "", 
+        "ec2_ebs_optimized": false, 
+        "ec2_eventsSet": "", 
+        "ec2_group_name": "", 
+        "ec2_hypervisor": "xen", 
+        "ec2_id": "i-04500cc8a685f5502", 
+        "ec2_image_id": "ami-0817d428a6fb68645", 
+        "ec2_instance_profile": "", 
+        "ec2_instance_type": "t2.micro", 
+        "ec2_ip_address": "52.7.65.63", 
+        "ec2_item": "", 
+        "ec2_kernel": "", 
+        "ec2_key_name": "ansible2", 
+        "ec2_launch_time": "2020-10-23T04:14:54.000Z", 
+        "ec2_monitored": false, 
+        "ec2_monitoring": "", 
+        "ec2_monitoring_state": "disabled", 
+        "ec2_persistent": false, 
+        "ec2_placement": "us-east-1a", 
+        "ec2_platform": "", 
+        "ec2_previous_state": "", 
+        "ec2_previous_state_code": 0, 
+        "ec2_private_dns_name": "ip-10-0-0-85.ec2.internal", 
+        "ec2_private_ip_address": "10.0.0.85", 
+        "ec2_public_dns_name": "", 
+        "ec2_ramdisk": "", 
+        "ec2_reason": "", 
+        "ec2_region": "us-east-1", 
+        "ec2_requester_id": "", 
+        "ec2_root_device_name": "/dev/sda1", 
+        "ec2_root_device_type": "ebs", 
+        "ec2_security_group_ids": "sg-0c6cfa0f8ce7d1fce", 
+        "ec2_security_group_names": "launch-wizard-4", 
+        "ec2_sourceDestCheck": "true", 
+        "ec2_spot_instance_request_id": "", 
+        "ec2_state": "running", 
+        "ec2_state_code": 16, 
+        "ec2_state_reason": "", 
+        "ec2_subnet_id": "subnet-082ca6c269123c053", 
+        "ec2_tag_Name": "Bastion Host", 
+        "ec2_virtualization_type": "hvm", 
+        "ec2_vpc_id": "vpc-071368e1167a5ace2"
+      }
+    }
+  }, 
+  "ami_06b263d6ceff0b3dd": [
+    "34.239.142.102", 
+    "52.203.109.57"
+  ], 
+  "ami_0817d428a6fb68645": [
+    "52.7.65.63"
+  ], 
+  "ec2": [
+    "52.7.65.63", 
+    "34.239.142.102", 
+    "52.203.109.57"
+  ], 
+  "i-00ea82a3096d2e732": [
+    "34.239.142.102"
+  ], 
+  "i-04500cc8a685f5502": [
+    "52.7.65.63"
+  ], 
+  "i-08691b704b3acbb8c": [
+    "52.203.109.57"
+  ], 
+  "key_ansible2": [
+    "52.7.65.63", 
+    "52.203.109.57"
+  ], 
+  "key_mywinkp": [
+    "34.239.142.102"
+  ], 
+  "platform_undefined": [
+    "52.7.65.63", 
+    "34.239.142.102", 
+    "52.203.109.57"
+  ], 
+  "security_group_launch_wizard_1": [
+    "34.239.142.102", 
+    "52.203.109.57"
+  ], 
+  "security_group_launch_wizard_4": [
+    "52.7.65.63"
+  ], 
+  "tag_Name_Bastion_Host": [
+    "52.7.65.63"
+  ], 
+  "tag_Name_Main_server": [
+    "34.239.142.102"
+  ], 
+  "tag_Name_ansible__2": [
+    "52.203.109.57"
+  ], 
+  "type_t2_micro": [
+    "52.7.65.63", 
+    "34.239.142.102", 
+    "52.203.109.57"
+  ], 
+  "us-east-1": [
+    "52.7.65.63", 
+    "34.239.142.102", 
+    "52.203.109.57"
+  ], 
+  "us-east-1a": [
+    "52.7.65.63"
+  ], 
+  "us-east-1c": [
+    "34.239.142.102", 
+    "52.203.109.57"
+  ], 
+  "vpc_id_vpc_071368e1167a5ace2": [
+    "52.7.65.63"
+  ], 
+  "vpc_id_vpc_5567152f": [
+    "34.239.142.102", 
+    "52.203.109.57"
+  ]
+}
